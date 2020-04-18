@@ -1,6 +1,10 @@
-var express = require('express');
-var app = express();
-var path = require('path');
+const express = require('express');
+const app = express();
+const path = require('path');
+const {spawn} = require('child_process');
+import initApis from 'api'
+
+initApis(app)
 
 // viewed at http://localhost:3000
 app.use(express.static('dist'))
