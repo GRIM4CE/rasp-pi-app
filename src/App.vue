@@ -15,7 +15,7 @@
         if(this.buttonDisabled) return
         this.buttonDisabled = true
         try {
-          const { data } = await axios.get('/python')
+          const { data } = await axios.get('/api/v1/climate')
           this.temperature = data
         } catch(e) {
           this.error = e
