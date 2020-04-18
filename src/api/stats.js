@@ -1,3 +1,5 @@
+const {spawn} = require('child_process');
+
 app.get('/python', (req, res) => {
   let jsonData
   // // spawn new child process to call the python script

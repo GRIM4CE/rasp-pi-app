@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
-const path = require('path');
-const {spawn} = require('child_process');
-import initApis from 'api'
+const firebase = require('./database/firebase.js')
+import api from './src/api';
+
+console.log(firebase)
 
 initApis(app)
 
