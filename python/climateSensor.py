@@ -14,6 +14,8 @@ def getSensorData():
         jsonRes = json.dumps(data)
         return jsonRes
     except RuntimeError as error:
-        return 'Failed retrieve data from sensor'
+        data = {'error': true, text: 'Failed retrieve data from sensor'}
+        jsonRes = json.dumps(data)
+        return jsonRes
 
 print(getSensorData())
