@@ -1,5 +1,4 @@
-import * as firebase from 'firebase/app';
-import 'firebase/database';
+import * as firebase from 'firebase';
 
 const firebaseConfig = {
     apiKey: "AIzaSyDyq9_xYRqcjnzGUyqzQE-iIJ8SewQ7u3A",
@@ -11,4 +10,13 @@ const firebaseConfig = {
     appId: "1:927583996955:web:f0296b04f84d1c2c3bbcbe"
 }
 
-export default firebase.initializeApp(firebaseConfig)
+const app =  firebase.default.initializeApp(firebaseConfig)
+const db = app.database()
+const ref = db.ref()
+
+ref.once('value')
+ .then(function (snap) {
+ console.log('snap.val()', snap.val());
+})
+
+export default ref
