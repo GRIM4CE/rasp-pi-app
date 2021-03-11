@@ -1,5 +1,7 @@
 # pi-app
 
+Simple project to take tempature from raspberry pi when button is clicked on website.
+
 ## Project setup
 ```
 npm install
